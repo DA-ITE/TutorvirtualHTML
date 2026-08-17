@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>BIANKA - Tu asistente inteligente de aprendizaje SISE</title>
+<title>Tutor Virtual 2.0 - Tu asistente inteligente de aprendizaje SISE</title>
 <style>
 :root{--red:#ff0e49;--red2:#d90b3f;--dark:#241f21;--muted:#746b6e;--line:#eadfe2;--soft:#f8f4f5;--bg:#eee9ea;--ok:#10b981}
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--bg)}button,input{font:inherit}.hidden{display:none!important}
@@ -43,15 +43,15 @@
 <div class="app">
 <section id="welcome" class="welcome">
 <div class="welcome-art">
-<div class="logo"><div class="logo-mark">B</div><div><h1>BIANKA</h1><p>Tu asistente inteligente de aprendizaje SISE</p></div></div>
-<div class="welcome-copy"><h2>Consulta todo el contenido de SaraBank.</h2><p>BIANKA utiliza la información completa de los manuales, procedimientos, imágenes, casuísticas y contingencias integradas en su base de aprendizaje.</p><div class="features"><div class="feature"><span class="check">✓</span>Transacciones y rutas completas</div><div class="feature"><span class="check">✓</span>Configuración, chequeras y usuarios</div><div class="feature"><span class="check">✓</span>Definiciones, casos y contingencias</div></div></div>
+<div class="logo"><div class="logo-mark">TV</div><div><h1>Tutor Virtual 2.0</h1><p>Tu asistente inteligente de aprendizaje SISE</p></div></div>
+<div class="welcome-copy"><h2>Consulta todo el contenido de SaraBank.</h2><p>Tutor Virtual 2.0 utiliza la información completa de los manuales, procedimientos, imágenes, casuísticas y contingencias integradas en su base de aprendizaje.</p><div class="features"><div class="feature"><span class="check">✓</span>Transacciones y rutas completas</div><div class="feature"><span class="check">✓</span>Configuración, chequeras y usuarios</div><div class="feature"><span class="check">✓</span>Definiciones, casos y contingencias</div></div></div>
 <div style="position:relative;z-index:1;font-size:11px;color:#cfc5c8">SISE · Aprendizaje práctico con SaraBank</div>
 </div>
-<div class="welcome-form"><div class="form-card"><span class="pill">BIENVENIDO(A)</span><h2>Antes de comenzar</h2><p>Ingresa tus datos para personalizar la conversación.</p><div class="field"><label>Nombre(s)</label><input id="firstName" placeholder="Escribe tu nombre"></div><div class="field"><label>Apellido(s)</label><input id="lastName" placeholder="Escribe tu apellido"></div><label class="consent"><input id="consent" type="checkbox"><span>Confirmo que utilizaré BIANKA como apoyo durante mi proceso de aprendizaje.</span></label><button class="start" onclick="startConversation()">Comenzar experiencia</button><div id="formError" class="form-error"></div></div></div>
+<div class="welcome-form"><div class="form-card"><span class="pill">BIENVENIDO(A)</span><h2>Antes de comenzar</h2><p>Ingresa tus datos para personalizar la conversación.</p><div class="field"><label>Nombre(s)</label><input id="firstName" placeholder="Escribe tu nombre"></div><div class="field"><label>Apellido(s)</label><input id="lastName" placeholder="Escribe tu apellido"></div><label class="consent"><input id="consent" type="checkbox"><span>Confirmo que utilizaré Tutor Virtual 2.0 como apoyo durante mi proceso de aprendizaje.</span></label><button class="start" onclick="startConversation()">Comenzar experiencia</button><div id="formError" class="form-error"></div></div></div>
 </section>
 <section id="chatApp" class="chat-app hidden">
-<aside class="sidebar"><div class="side-brand"><div class="side-mark">B</div><div><h2>BIANKA</h2><p>Asistente inteligente SISE</p></div></div><button class="new-chat" onclick="newConversation()">＋ Nueva conversación</button><button class="finish-side" onclick="finishConsultation()">✓ Finalizar consulta</button><div class="side-card"><h3>¿Qué puedo consultar?</h3><ul><li>✓ Definiciones de módulos</li><li>✓ Acceso y configuración</li><li>✓ Transacciones paso a paso</li><li>✓ Casuísticas y cierres</li><li>✓ Contingencias y errores</li></ul></div><div class="status"><span class="dot"></span>Base completa conectada</div></aside>
-<main class="chat-main"><header class="top"><div><h2 id="chatTitle">BIANKA</h2><p>Tu asistente inteligente de aprendizaje SISE</p></div><div class="top-actions"><span class="connected">● Conectado</span><button id="finishBtn" class="finish-btn" onclick="finishConsultation()">Finalizar consulta</button></div></header><section id="messages" class="messages"></section>
+<aside class="sidebar"><div class="side-brand"><div class="side-mark">TV</div><div><h2>Tutor Virtual 2.0</h2><p>Asistente inteligente SISE</p></div></div><button class="new-chat" onclick="newConversation()">＋ Nueva conversación</button><button class="finish-side" onclick="finishConsultation()">✓ Finalizar consulta</button><div class="side-card"><h3>¿Qué puedo consultar?</h3><ul><li>✓ Definiciones de módulos</li><li>✓ Acceso y configuración</li><li>✓ Transacciones paso a paso</li><li>✓ Casuísticas y cierres</li><li>✓ Contingencias y errores</li></ul></div><div class="status"><span class="dot"></span>Base completa conectada</div></aside>
+<main class="chat-main"><header class="top"><div><h2 id="chatTitle">Tutor Virtual 2.0</h2><p>Tu asistente inteligente de aprendizaje SISE</p></div><div class="top-actions"><span class="connected">● Conectado</span><button id="finishBtn" class="finish-btn" onclick="finishConsultation()">Finalizar consulta</button></div></header><section id="messages" class="messages"></section>
 <div class="quick"><button onclick="setQuestion('¿Qué es SARABranch?')">¿Qué es SARABranch?</button><button onclick="setQuestion('¿Cómo hago una transferencia entre cuentas?')">Transferencia</button><button onclick="setQuestion('Explícame la casuística completa de SaraBranch')">Casuística</button><button onclick="setQuestion('¿Cómo configuro chequeras personalizadas?')">Chequeras</button><button onclick="setQuestion('El sistema está lento, ¿qué hago?')">Contingencia</button></div>
 <div class="study-tools">
   <span class="study-label">Herramientas</span>
@@ -59,8 +59,8 @@
   <button class="tool-btn primary" onclick="generateInfographic()">✨ Crear infografía</button>
   <button class="tool-btn" onclick="downloadSearchPDF()">📄 Descargar PDF</button>
 </div>
-<div class="tool-help">Las herramientas trabajan con tu última consulta y con la información respondida por BIANKA.</div>
-<footer class="composer"><div class="input-wrap"><input id="question" placeholder="Escribe tu consulta aquí..." onkeydown="handleKey(event)"><button class="send" onclick="ask()">➜</button></div><p class="note">BIANKA consulta todos los documentos integrados y responde únicamente con información del material.</p></footer></main>
+<div class="tool-help">Las herramientas trabajan con tu última consulta y con la información respondida por Tutor Virtual 2.0.</div>
+<footer class="composer"><div class="input-wrap"><input id="question" placeholder="Escribe tu consulta aquí..." onkeydown="handleKey(event)"><button class="send" onclick="ask()">➜</button></div><p class="note">Tutor Virtual 2.0 consulta todos los documentos integrados y responde únicamente con información del material.</p></footer></main>
 </section></div>
 <div id="finishStatus" class="finish-status hidden"><div class="finish-card"><div class="finish-icon">✓</div><h3 id="finishTitle">Registrando interacción</h3><p id="finishMessage">Estamos guardando la información de tu consulta.</p></div></div>
 <script>
@@ -88,18 +88,18 @@ function searchKnowledge(text){
  const wordsOut=textOut.split(" ");if(wordsOut.length>150)textOut=wordsOut.slice(0,150).join(" ")+"…";
  return {text:textOut,sources:[...new Set(selected.map(x=>x.source))]};
 }
-function startConversation(){const first=document.getElementById("firstName").value.trim(),last=document.getElementById("lastName").value.trim(),consent=document.getElementById("consent").checked,error=document.getElementById("formError");if(!first||!last){error.textContent="Completa tu nombre y apellido.";return}if(!consent){error.textContent="Confirma el uso educativo de BIANKA.";return}student={first,last};sessionStartedAt=new Date();interactionLog=[];pendingQuestion="";error.textContent="";welcome.classList.add("hidden");chatApp.classList.remove("hidden");document.getElementById("chatTitle").textContent="Hola, "+first+" 👋";messages.innerHTML="";addBot("¡Hola, "+first+" "+last+"! 👋\n\nSoy BIANKA. Puedes consultarme cualquier tema contenido en los manuales de SaraBank: definiciones, módulos, accesos, configuraciones, transacciones, chequeras, casuísticas, cierres y contingencias.");question.focus()}
-function newConversation(){clearTimeout(timer);messages.innerHTML="";chatApp.classList.add("hidden");welcome.classList.remove("hidden");document.getElementById("firstName").value="";document.getElementById("lastName").value="";document.getElementById("consent").checked=false;active=false;awaiting=false;lastProcedure=null;lastResponseText="";lastResponseTitle="Consulta BIANKA";lastQuestionText="";sessionStartedAt=null;interactionLog=[];pendingQuestion=""}
+function startConversation(){const first=document.getElementById("firstName").value.trim(),last=document.getElementById("lastName").value.trim(),consent=document.getElementById("consent").checked,error=document.getElementById("formError");if(!first||!last){error.textContent="Completa tu nombre y apellido.";return}if(!consent){error.textContent="Confirma el uso educativo de Tutor Virtual 2.0.";return}student={first,last};sessionStartedAt=new Date();interactionLog=[];pendingQuestion="";error.textContent="";welcome.classList.add("hidden");chatApp.classList.remove("hidden");document.getElementById("chatTitle").textContent="Hola, "+first+" 👋";messages.innerHTML="";addBot("¡Hola, "+first+" "+last+"! 👋\n\nSoy Tutor Virtual 2.0. Puedes consultarme cualquier tema contenido en los manuales de SaraBank: definiciones, módulos, accesos, configuraciones, transacciones, chequeras, casuísticas, cierres y contingencias.");question.focus()}
+function newConversation(){clearTimeout(timer);messages.innerHTML="";chatApp.classList.add("hidden");welcome.classList.remove("hidden");document.getElementById("firstName").value="";document.getElementById("lastName").value="";document.getElementById("consent").checked=false;active=false;awaiting=false;lastProcedure=null;lastResponseText="";lastResponseTitle="Consulta Tutor Virtual 2.0";lastQuestionText="";sessionStartedAt=null;interactionLog=[];pendingQuestion=""}
 function esc(t){return String(t||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
 function buildProcedureText(p){return ["Procedimiento: "+p.title,"Código: "+(p.code||"No aplica"),"Ruta: "+p.route,"Pasos: "+p.steps.join(" | "),"Validaciones: "+p.validations.join(" | "),"Resultado: "+p.result].join("\n")}
 let lastResponseText="";
-let lastResponseTitle="Consulta BIANKA";
+let lastResponseTitle="Consulta Tutor Virtual 2.0";
 let lastQuestionText="";
 
 function rememberResponse(questionText,responseText,titleText){
   lastQuestionText=String(questionText||lastQuestionText||"");
   lastResponseText=String(responseText||"");
-  lastResponseTitle=String(titleText||"Consulta BIANKA");
+  lastResponseTitle=String(titleText||"Consulta Tutor Virtual 2.0");
 }
 
 function getLastInteraction(){
@@ -108,10 +108,10 @@ function getLastInteraction(){
     return {
       question:item.consulta||lastQuestionText||"",
       answer:item.respuesta||lastResponseText||"",
-      title:lastResponseTitle||"Consulta BIANKA"
+      title:lastResponseTitle||"Consulta Tutor Virtual 2.0"
     };
   }
-  return {question:lastQuestionText||"",answer:lastResponseText||"",title:lastResponseTitle||"Consulta BIANKA"};
+  return {question:lastQuestionText||"",answer:lastResponseText||"",title:lastResponseTitle||"Consulta Tutor Virtual 2.0"};
 }
 
 function cleanForSummary(text){
@@ -153,7 +153,7 @@ function generateSummary(){
 
 function extractVisualData(){
   const data=getLastInteraction();
-  let title=data.title||"Consulta BIANKA";
+  let title=data.title||"Consulta Tutor Virtual 2.0";
   let subtitle=data.question||"Resumen visual";
   let points=[];
 
@@ -186,13 +186,13 @@ function generateInfographic(){
   row.className="row";
   const av=document.createElement("div");
   av.className="avatar";
-  av.textContent="B";
+  av.textContent="TV";
   row.appendChild(av);
 
   const card=document.createElement("div");
   card.className="visual-card";
   card.innerHTML=
-    '<div class="visual-head"><small>INFOGRAFÍA BIANKA</small><h3>'+esc(data.title)+'</h3></div>'+
+    '<div class="visual-head"><small>INFOGRAFÍA TUTOR VIRTUAL 2.0</small><h3>'+esc(data.title)+'</h3></div>'+
     '<div class="visual-body">'+
       '<div class="visual-summary">'+esc(data.subtitle)+'</div>'+
       '<div class="visual-points">'+data.points.map((p,i)=>
@@ -255,11 +255,11 @@ function downloadInfographicPNG(data){
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
     <rect width="100%" height="100%" fill="#ffffff"/>
     <rect width="${W}" height="${headerH}" fill="#ff0e49"/>
-    <text x="72" y="62" font-family="Arial" font-size="19" font-weight="800" fill="#ffffff" opacity=".9">BIANKA · INFOGRAFÍA DE APRENDIZAJE</text>
+    <text x="72" y="62" font-family="Arial" font-size="19" font-weight="800" fill="#ffffff" opacity=".9">TUTOR VIRTUAL 2.0 · INFOGRAFÍA DE APRENDIZAJE</text>
     ${titleLines.map((l,i)=>`<text x="72" y="${112+i*48}" font-family="Arial" font-size="38" font-weight="800" fill="#ffffff">${svgEscape(l)}</text>`).join("")}
     <text x="72" y="${headerH+42}" font-family="Arial" font-size="17" fill="#746b6e">${svgEscape(data.subtitle||"")}</text>
     ${blocks}
-    <text x="72" y="${H-30}" font-family="Arial" font-size="14" fill="#8a8184">SISE · BIANKA, tu asistente inteligente de aprendizaje</text>
+    <text x="72" y="${H-30}" font-family="Arial" font-size="14" fill="#8a8184">SISE · Tutor Virtual 2.0, tu asistente inteligente de aprendizaje</text>
   </svg>`;
 
   const blob=new Blob([svg],{type:"image/svg+xml;charset=utf-8"});
@@ -273,7 +273,7 @@ function downloadInfographicPNG(data){
     ctx.drawImage(img,0,0);
     URL.revokeObjectURL(url);
     const link=document.createElement("a");
-    const filename=(data.title||"infografia-bianka").replace(/[^\wáéíóúñÁÉÍÓÚÑ-]+/g,"_");
+    const filename=(data.title||"infografia-tutor-virtual-2-0").replace(/[^\wáéíóúñÁÉÍÓÚÑ-]+/g,"_");
     link.download=filename+".png";
     link.href=canvas.toDataURL("image/png");
     link.click();
@@ -290,10 +290,10 @@ function buildPrintableHTML(title,subtitle,items,question){
   .item{margin:0 0 11px;border:1px solid #eadfe2;border-radius:10px;padding:12px;page-break-inside:avoid}.item b{color:#ff0e49}.item p{margin:5px 0 0;font-size:12px;line-height:1.5}
   footer{margin-top:20px;border-top:1px solid #eadfe2;padding-top:10px;color:#746b6e;font-size:10px}
   </style></head><body>
-  <div class="head"><small>BIANKA · SISE</small><h1>${esc(title)}</h1><div class="sub">${esc(subtitle||"")}</div></div>
+  <div class="head"><small>Tutor Virtual 2.0 · SISE</small><h1>${esc(title)}</h1><div class="sub">${esc(subtitle||"")}</div></div>
   ${question?'<div class="q"><b>Consulta:</b> '+esc(question)+'</div>':""}
   ${items.map(x=>'<div class="item"><b>'+esc(x.label)+'</b><p>'+esc(x.text)+'</p></div>').join("")}
-  <footer>Material generado desde la consulta realizada en BIANKA.</footer>
+  <footer>Material generado desde la consulta realizada en Tutor Virtual 2.0.</footer>
   </body></html>`;
 }
 
@@ -325,7 +325,7 @@ function downloadSearchPDF(){
     summarizeText(data.answer,8).forEach((s,i)=>items.push({label:"Punto "+(i+1),text:s}));
     if(!items.length)items.push({label:"Respuesta",text:data.answer});
   }
-  openPrintDocument(buildPrintableHTML(data.title||"Consulta BIANKA","Resumen de búsqueda",items,data.question));
+  openPrintDocument(buildPrintableHTML(data.title||"Consulta Tutor Virtual 2.0","Resumen de búsqueda",items,data.question));
 }
 
 function registerAnswer(answer){
@@ -333,7 +333,7 @@ function registerAnswer(answer){
   const qText=pendingQuestion;
   const aText=String(answer||"");
   interactionLog.push({consulta:qText,respuesta:aText,fechaHora:new Date().toISOString()});
-  rememberResponse(qText,aText,lastProcedure?lastProcedure.title:"Consulta BIANKA");
+  rememberResponse(qText,aText,lastProcedure?lastProcedure.title:"Consulta Tutor Virtual 2.0");
   pendingQuestion="";
 }
 function buildRecord(){
@@ -392,7 +392,7 @@ async function sendRecord(record){
 
   return {ok:true,configured:true};
 }
-function resetEntireSession(){clearTimeout(timer);messages.innerHTML="";document.getElementById("firstName").value="";document.getElementById("lastName").value="";document.getElementById("consent").checked=false;question.value="";chatApp.classList.add("hidden");welcome.classList.remove("hidden");student={first:"",last:""};active=false;awaiting=false;lastProcedure=null;lastResponseText="";lastResponseTitle="Consulta BIANKA";lastQuestionText="";sessionStartedAt=null;interactionLog=[];pendingQuestion=""}
+function resetEntireSession(){clearTimeout(timer);messages.innerHTML="";document.getElementById("firstName").value="";document.getElementById("lastName").value="";document.getElementById("consent").checked=false;question.value="";chatApp.classList.add("hidden");welcome.classList.remove("hidden");student={first:"",last:""};active=false;awaiting=false;lastProcedure=null;lastResponseText="";lastResponseTitle="Consulta Tutor Virtual 2.0";lastQuestionText="";sessionStartedAt=null;interactionLog=[];pendingQuestion=""}
 async function finishConsultation(){
   const overlay=document.getElementById("finishStatus");
   const title=document.getElementById("finishTitle");
@@ -410,17 +410,17 @@ async function finishConsultation(){
     const result=await sendRecord(record);
 
     if(result.ok){
-      localStorage.removeItem("BIANKA_INTERACCION_PENDIENTE");
+      localStorage.removeItem("TUTOR_VIRTUAL_2_0_INTERACCION_PENDIENTE");
       title.textContent="Registro completado";
-      message.textContent="Tu interacción fue enviada correctamente al registro de BIANKA.";
+      message.textContent="Tu interacción fue enviada correctamente al registro de Tutor Virtual 2.0.";
     }else{
-      localStorage.setItem("BIANKA_INTERACCION_PENDIENTE",JSON.stringify(record));
+      localStorage.setItem("TUTOR_VIRTUAL_2_0_INTERACCION_PENDIENTE",JSON.stringify(record));
       title.textContent="Registro no configurado";
       message.textContent="La URL de registro todavía no está configurada. La interacción quedó guardada temporalmente en este navegador.";
     }
   }catch(error){
     console.error("Error al registrar la interacción:",error);
-    localStorage.setItem("BIANKA_INTERACCION_PENDIENTE",JSON.stringify(record));
+    localStorage.setItem("TUTOR_VIRTUAL_2_0_INTERACCION_PENDIENTE",JSON.stringify(record));
     title.textContent="Registro pendiente";
     message.textContent="No fue posible enviar la interacción. Se guardó temporalmente en este navegador para no perderla.";
   }
@@ -431,10 +431,10 @@ async function finishConsultation(){
     if(btn)btn.disabled=false;
   },1800);
 }
-function addBot(text,source){const row=document.createElement("div");row.className="row";row.innerHTML='<div class="avatar">B</div>';const b=document.createElement("div");b.className="bubble bot";b.textContent=text;if(source){const s=document.createElement("div");s.className="source-note";s.textContent="Fuente integrada: "+source.join(", ");b.appendChild(s)}row.appendChild(b);messages.appendChild(row);messages.scrollTop=messages.scrollHeight}
+function addBot(text,source){const row=document.createElement("div");row.className="row";row.innerHTML='<div class="avatar">TV</div>';const b=document.createElement("div");b.className="bubble bot";b.textContent=text;if(source){const s=document.createElement("div");s.className="source-note";s.textContent="Fuente integrada: "+source.join(", ");b.appendChild(s)}row.appendChild(b);messages.appendChild(row);messages.scrollTop=messages.scrollHeight}
 function addUser(text){const row=document.createElement("div");row.className="row user-row";const b=document.createElement("div");b.className="bubble user";b.textContent=text;row.appendChild(b);messages.appendChild(row);messages.scrollTop=messages.scrollHeight}
-function showTyping(){const row=document.createElement("div");row.className="row";row.id="typing";row.innerHTML='<div class="avatar">B</div><div class="bubble bot"><span class="typing-text">BIANKA está revisando todos los materiales...</span> <span class="dots"><span></span><span></span><span></span></span></div>';messages.appendChild(row);messages.scrollTop=messages.scrollHeight}
-function renderProcedure(p){lastProcedure=p;lastResponseTitle=p.title;const row=document.createElement("div");row.className="row";const av=document.createElement("div");av.className="avatar";av.textContent="B";row.appendChild(av);const card=document.createElement("div");card.className="process-card";const fields=p.fields.length?'<div class="section"><h4>Llenado de campos</h4><div class="field-list">'+p.fields.map(f=>'<div class="field-item"><b>'+esc(f[0])+'</b>'+esc(f[1])+'</div>').join("")+'</div></div>':"";card.innerHTML='<div class="process-head"><small>PROCEDIMIENTO EN EL SISTEMA</small><h3>'+esc(p.title)+'</h3></div><div class="process-meta"><div class="meta-box"><span>Código</span><strong>'+(esc(p.code)||"No aplica")+'</strong></div><div class="meta-box"><span>Módulo / ruta</span><strong>'+esc(p.route)+'</strong></div></div><div class="process-body"><div class="section"><h4>Paso a paso</h4><ol class="steps">'+p.steps.map(s=>'<li>'+esc(s)+'</li>').join("")+'</ol></div>'+fields+'<div class="section"><h4>Validaciones</h4><div class="validation">'+p.validations.map(v=>"• "+esc(v)).join("<br>")+'</div></div><div class="section"><h4>Resultado esperado</h4><div class="result">'+esc(p.result)+'</div></div>'+(p.imageBased?'<span class="image-tag">📷 Información interpretada desde pantallas del sistema</span>':"")+(p.note?'<div class="note-box"><b>Observación:</b> '+esc(p.note)+'</div>':"")+'</div><div class="feedback"><span>¿Esta respuesta resolvió tu consulta?</span><div class="feedback-actions"><button onclick="feedbackYes(this)">👍 Sí</button><button onclick="feedbackNo(this)">👎 No</button></div></div>';row.appendChild(card);messages.appendChild(row);messages.scrollTop=messages.scrollHeight}
+function showTyping(){const row=document.createElement("div");row.className="row";row.id="typing";row.innerHTML='<div class="avatar">TV</div><div class="bubble bot"><span class="typing-text">Tutor Virtual 2.0 está revisando todos los materiales...</span> <span class="dots"><span></span><span></span><span></span></span></div>';messages.appendChild(row);messages.scrollTop=messages.scrollHeight}
+function renderProcedure(p){lastProcedure=p;lastResponseTitle=p.title;const row=document.createElement("div");row.className="row";const av=document.createElement("div");av.className="avatar";av.textContent="TV";row.appendChild(av);const card=document.createElement("div");card.className="process-card";const fields=p.fields.length?'<div class="section"><h4>Llenado de campos</h4><div class="field-list">'+p.fields.map(f=>'<div class="field-item"><b>'+esc(f[0])+'</b>'+esc(f[1])+'</div>').join("")+'</div></div>':"";card.innerHTML='<div class="process-head"><small>PROCEDIMIENTO EN EL SISTEMA</small><h3>'+esc(p.title)+'</h3></div><div class="process-meta"><div class="meta-box"><span>Código</span><strong>'+(esc(p.code)||"No aplica")+'</strong></div><div class="meta-box"><span>Módulo / ruta</span><strong>'+esc(p.route)+'</strong></div></div><div class="process-body"><div class="section"><h4>Paso a paso</h4><ol class="steps">'+p.steps.map(s=>'<li>'+esc(s)+'</li>').join("")+'</ol></div>'+fields+'<div class="section"><h4>Validaciones</h4><div class="validation">'+p.validations.map(v=>"• "+esc(v)).join("<br>")+'</div></div><div class="section"><h4>Resultado esperado</h4><div class="result">'+esc(p.result)+'</div></div>'+(p.imageBased?'<span class="image-tag">📷 Información interpretada desde pantallas del sistema</span>':"")+(p.note?'<div class="note-box"><b>Observación:</b> '+esc(p.note)+'</div>':"")+'</div><div class="feedback"><span>¿Esta respuesta resolvió tu consulta?</span><div class="feedback-actions"><button onclick="feedbackYes(this)">👍 Sí</button><button onclick="feedbackNo(this)">👎 No</button></div></div>';row.appendChild(card);messages.appendChild(row);messages.scrollTop=messages.scrollHeight}
 function feedbackYes(btn){btn.closest(".feedback").innerHTML='<span style="color:#047857;font-weight:700">¡Gracias! Me alegra haberte ayudado. 😊</span>'}
 function feedbackNo(btn){btn.closest(".feedback").innerHTML='<span style="color:#9f1239;font-weight:700">Revisemos el procedimiento con atención.</span>';setTimeout(()=>addBot("Revisa la ruta, completa los campos en el orden mostrado y valida todos los datos antes de pulsar Aceptar. Si tu pantalla muestra un campo distinto, consulta a tu docente antes de continuar."),400)}
 function isNo(t){return /^(no|no gracias|nada|nada mas|eso es todo|ya no)$/.test(norm(t))}
